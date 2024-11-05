@@ -1,0 +1,15 @@
+<view class="login-container">
+  <view class="login-form">
+    <!-- 手机号输入框 -->
+    <input class="input" type="number" placeholder="请输入手机号" bindinput="onPhoneInput" />
+    
+    <!-- 获取验证码按钮 -->
+    <button class="get-code-btn" bindtap="getCode" disabled="{{isCodeSent}}">获取验证码</button>
+    
+    <!-- 验证码输入框 -->
+    <input class="input" type="number" placeholder="请输入验证码" bindinput="onCodeInput" />
+    
+    <!-- 登录按钮 -->
+    <button class="login-btn" bindtap="login" disabled="{{!phone || !code}}">登录</button>
+  </view>
+</view>
