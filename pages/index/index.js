@@ -32,7 +32,7 @@ Page({
     }
 
     wx.request({
-      url: '/user/code',  // 后端接口（这里到底该怎么写）
+      url: 'localhost:8081/user/code',  // 后端接口（这里到底该怎么写）
       method: 'POST',
       data: { phone },
       success: (res) => {
@@ -72,7 +72,7 @@ Page({
     }
 
     wx.request({
-      url: '/user/login',  // 后端接口
+      url: 'localhost:8081/user/login',  // 后端接口
       method: 'POST',
       data: { phone, code },
       success: (res) => {
